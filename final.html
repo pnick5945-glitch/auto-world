@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>Confirmation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h2>Booking Confirmed 🚗</h2>
+<div id="summary"></div>
+<script>
+const cars = JSON.parse(localStorage.getItem("bookings")) || [];
+const user = JSON.parse(localStorage.getItem("user"));
+
+let output = `<h3>Name: ${user.name}</h3>`;
+output += `<h3>Phone: ${user.phone}</h3>`;
+output += `<h3>Address: ${user.address}</h3>`;
+
+output += "<h3>Booked Cars:</h3>";
+cars.forEach(c=>{
+  output += `<p>${c.name} - ${c.price}</p>`;
+});
+
+document.getElementById("summary").innerHTML = output;
+</script>
+</body>
+</html>

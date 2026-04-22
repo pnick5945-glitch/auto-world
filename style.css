@@ -1,0 +1,157 @@
+/* GLOBAL - ULTRA DARK */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #010409;
+  color: #e5e7eb;
+}
+
+/* HEADER (UPDATED LAYOUT) */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(10, 15, 25, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* BRAND TITLE (AutoWorld) */
+.brand {
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, #ffffff, #9ca3af, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+/* glowing underline */
+.brand::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #9333ea);
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(147,51,234,0.6);
+}
+
+/* NAV BUTTONS (HORIZONTAL) */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  padding: 25px;
+}
+
+/* CARD */
+.card {
+  background: rgba(10, 15, 25, 0.75);
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  backdrop-filter: blur(18px);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(255,255,255,0.15);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.9);
+}
+
+/* IMAGE */
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.06);
+}
+
+/* TEXT */
+.card h3 {
+  margin: 10px 0 5px;
+  color: #ffffff;
+}
+
+.card p {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.card h4 {
+  margin: 5px 0;
+  color: #d1d5db;
+}
+
+/* BUTTON - DARK GLASS */
+button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.03);
+  color: #e5e7eb;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+/* PREBOOK BUTTON */
+.prebook {
+  background: rgba(22,163,74,0.15);
+  border: 1px solid rgba(22,163,74,0.4);
+}
+
+.prebook:hover {
+  background: rgba(22,163,74,0.3);
+}
+
+/* INPUTS */
+input, textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.7);
+  color: white;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 10px;
+}
